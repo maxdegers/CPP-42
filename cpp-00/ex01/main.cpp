@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 13:41:43 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/08/21 16:45:18 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/08/21 17:45:19 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,17 @@
 int main()
 {
     PhoneBook book;
-    book.add();
-    book.search();
+    std::string text = "";
+    while (true)
+    {
+        std::cout << "The program only accepts ADD, SEARCH and EXIT: " << std::endl;
+        std::cin >> text;
+        if (text == "EXIT")
+            break;
+        if (text == "SEARCH")
+            book.search();
+        if (text == "ADD")
+            book.add();
+    }
     return 0;
 }

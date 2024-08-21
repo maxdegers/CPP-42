@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 13:28:57 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/08/21 17:11:23 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/08/21 18:06:52 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,20 @@ class Contact
         
         void new_contact(){
             std::cout << "Contact First Name : " << std::endl;
-            std::cin >> first_name;
+            while (first_name == "")
+                std::getline(std::cin, first_name);
             std::cout << "Contact Last Name : " << std::endl;
-            std::cin >> last_name;
+            while (last_name == "")
+                std::getline(std::cin, last_name);
             std::cout << "Contact Nickname : " << std::endl;
-            std::cin >> nickname;
+            while (nickname == "")
+               std::getline(std::cin, nickname);
             std::cout << "Contact Phone Number : " << std::endl;
-            std::cin >> phone_number;
+            while (phone_number == "")
+               std::getline(std::cin, phone_number);
             std::cout << "Contact Darkest Secret : " << std::endl;
-            std::cin >> darkest_secret;
+            while (darkest_secret == "")
+               std::getline(std::cin, darkest_secret);
         }
 };
 
@@ -67,7 +72,7 @@ class PhoneBook
             std::cout << "     Index|First Name| Last Name|  Nickname" << std::endl;
             for (std::size_t i = 0; i < count ; i++)
             {
-                std::cout <<  "----------";
+                std::cout << "         " << i + 1;
                 std::cout <<  "|";
                 std::cout <<  columtext(contacts[i].first_name);
                 std::cout <<  "|";
@@ -78,7 +83,7 @@ class PhoneBook
         }
 
         void add(){
-            if (count < 7)
+            if (count < 8)
             {
                 contacts[count].new_contact();
                 count++;
