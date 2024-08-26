@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 13:28:57 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/08/21 19:20:37 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/08/26 09:54:57 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,19 +28,54 @@ class Contact
 		void new_contact(){
 			std::cout << "Contact First Name : " << std::endl;
 			while (first_name == "")
+			{
 				std::getline(std::cin, first_name);
+				if (std::cin.eof())
+				{
+					std::cout << std::endl;
+					return ;
+				}
+			}
 			std::cout << "Contact Last Name : " << std::endl;
 			while (last_name == "")
+			{
 				std::getline(std::cin, last_name);
+				if (std::cin.eof())
+				{
+					std::cout << std::endl;
+					return ;
+				}
+			}
 			std::cout << "Contact Nickname : " << std::endl;
 			while (nickname == "")
-			   std::getline(std::cin, nickname);
+			{
+				std::getline(std::cin, nickname);
+				if (std::cin.eof())
+				{
+					std::cout << std::endl;
+					return ;
+				}
+			}
 			std::cout << "Contact Phone Number : " << std::endl;
 			while (phone_number == "")
-			   std::getline(std::cin, phone_number);
+			{
+				std::getline(std::cin, phone_number);
+				if (std::cin.eof())
+				{
+					std::cout << std::endl;
+					return ;
+				}
+			}
 			std::cout << "Contact Darkest Secret : " << std::endl;
 			while (darkest_secret == "")
-			   std::getline(std::cin, darkest_secret);
+			{
+				std::getline(std::cin, darkest_secret);
+				if (std::cin.eof())
+				{
+				std::cout << std::endl;
+				return ;
+				}
+			}
 		}
 };
 
@@ -83,7 +118,15 @@ class PhoneBook
 			std::cout << "Enter the index of the contact to display: ";
 			std::string input;
 			std::getline(std::cin, input);
-			if (input == "") // TODO finich the serche section for index
+			if (std::cin.eof())
+			{
+				std::cout << std::endl;
+				return ;
+			}
+			// if (input == "") // TODO finich the serche section for index
+			// {
+				
+			// }
 		}
 
 		void add(){
