@@ -6,27 +6,49 @@
 #    By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/21 13:26:12 by mbrousse          #+#    #+#              #
-#    Updated: 2024/08/21 19:04:27 by mbrousse         ###   ########.fr        #
+#    Updated: 2024/08/26 10:13:59 by mbrousse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 		=		PhoneBook
+NAME		= PhoneBook
+	
+CC			= c++
+FLAGS		= -Wall -Wextra -Werror -g3 -std=c++98
+RM			= rm -rf
 
-CC			=		c++
-CPPFLAGS 	=		-Wall -Wextra -Werror -std=c++98
-RM			=		rm -rf
+OBJDIR = .objFiles
 
-INCLUDES	=		header.hpp
-SRCS		=		main.cpp
+FILES		= main Contact PhoneBook
 
-all:		${NAME}
+SRC			= $(FILES:=.cpp)
+OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
+HEADER		= Contact.hpp PhoneBook.hpp
 
-${NAME}:
-			${CC} ${CPPFLAGS} ${SRCS} -o ${NAME}
+#Colors:
+GREEN		=	\e[92;5;118m
+YELLOW		=	\e[93;5;226m
+GRAY		=	\e[33;2;37m
+RESET		=	\e[0m
+CURSIVE		=	\e[33;3m
 
-fclean:
-			${RM} ${NAME}
+all: $(NAME)
 
-re:			fclean all
+$(NAME): $(OBJ) $(HEADER)
+	@$(CC) $(OBJ) -o $(NAME)
+	@printf "$(_SUCCESS) $(GREEN)- Executable ready.\n$(RESET)"
 
-.PHONY:		fclean, all, re
+$(OBJDIR)/%.o: %.cpp $(HEADER)
+	@mkdir -p $(dir $@)
+	@$(CC) $(FLAGS) $(OPTS) -c $< -o $@
+
+clean:
+	@$(RM) $(OBJDIR) $(OBJ)
+	@printf "$(YELLOW)    - Object files removed.$(RESET)\n"
+
+fclean: clean
+	@$(RM) $(NAME)
+	@printf "$(YELLOW)    - Executable removed.$(RESET)\n"
+
+re: fclean all
+
+.PHONY: all clean fclean re bonus norm

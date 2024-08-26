@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 13:28:57 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/08/26 09:54:57 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/08/26 10:03:39 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,12 @@
 #include <string>
 
 
+
 class Contact
 {
+	private:
+	
+	
 	public:
 		Contact() : last_name(""), first_name(""), nickname(""), phone_number(""), darkest_secret("") {}
 		
@@ -83,7 +87,7 @@ class PhoneBook
 {
 	private:
 		std::size_t count;
-		Contact *contacts;
+		Contact contacts[8];
 		
 		std::string columtext(std::string text){
 			std::string block(10,' ');
@@ -101,7 +105,7 @@ class PhoneBook
 			}
 		}
 	public:
-		PhoneBook() : count(0), contacts(new Contact[8]){} //TODO CHECK IF NEW IS ALLOAWD
+		PhoneBook() : count(0), contacts(){} //TODO CHECK IF NEW IS ALLOAWD
 	
 		void search(){
 			std::cout << "     Index|First Name| Last Name|  Nickname" << std::endl;
