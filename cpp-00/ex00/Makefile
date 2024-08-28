@@ -5,29 +5,50 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/08/15 11:42:33 by mbrousse          #+#    #+#              #
-#    Updated: 2024/08/15 11:54:14 by mbrousse         ###   ########.fr        #
+#    Created: 2024/08/28 13:13:25 by mbrousse          #+#    #+#              #
+#    Updated: 2024/08/28 13:15:40 by mbrousse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 		=		megaphone
+NAME		= megaphone
+	
+CC			= c++
+FLAGS		= -Wall -Wextra -Werror -std=c++98
+RM			= rm -rf
 
-CC			=		c++
-CPPFLAGS 	=		-Wall -Wextra -Werror -std=c++98
-RM			=		rm -rf
+OBJDIR = .objFiles
 
-INCLUDES	=		includes
-SRCS		=		megaphone.cpp
+FILES		= megaphone
 
-all:		${NAME}
+SRC			= $(FILES:=.cpp)
+OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
+HEADER		= 
 
-${NAME}:
-			${CC} ${CPPFLAGS} ${SRCS} -o ${NAME}
+#Colors:
+GREEN		=	\e[92;5;118m
+YELLOW		=	\e[93;5;226m
+GRAY		=	\e[33;2;37m
+RESET		=	\e[0m
+CURSIVE		=	\e[33;3m
 
-fclean:
-			${RM} ${NAME}
+all: $(NAME)
 
-re:			fclean all
+$(NAME): $(OBJ) $(HEADER)
+	@$(CC) $(OBJ) -o $(NAME)
+	@printf "$(_SUCCESS) $(GREEN)- Executable ready.\n$(RESET)"
 
-.PHONY:		fclean, all, re
+$(OBJDIR)/%.o: %.cpp $(HEADER)
+	@mkdir -p $(dir $@)
+	@$(CC) $(FLAGS) $(OPTS) -c $< -o $@
 
+clean:
+	@$(RM) $(OBJDIR) $(OBJ)
+	@printf "$(YELLOW)    - Object files removed.$(RESET)\n"
+
+fclean: clean
+	@$(RM) $(NAME)
+	@printf "$(YELLOW)    - Executable removed.$(RESET)\n"
+
+re: fclean all
+
+.PHONY: all clean fclean re bonus norm
