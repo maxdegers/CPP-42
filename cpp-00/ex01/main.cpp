@@ -6,11 +6,13 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 13:41:43 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/08/26 09:54:07 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/08/28 10:33:18 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.hpp"
+#include <iostream>
+#include "PhoneBook.class.hpp"
+#include "Contact.class.hpp"
 
 int main()
 {
