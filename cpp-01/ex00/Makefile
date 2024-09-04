@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/08/28 13:24:09 by mbrousse          #+#    #+#              #
-#    Updated: 2024/08/28 13:24:22 by mbrousse         ###   ########.fr        #
+#    Created: 2024/09/03 14:21:52 by mbrousse          #+#    #+#              #
+#    Updated: 2024/09/03 14:21:54 by mbrousse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= PhoneBook
+NAME		= test-ex00
 	
 CC			= c++
 FLAGS		= -Wall -Wextra -Werror -std=c++98
@@ -18,11 +18,11 @@ RM			= rm -rf
 
 OBJDIR = .objFiles
 
-FILES		= main Contact.class PhoneBook.class
+FILES		= main newZombie randomChump Zombie
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		= Contact.class.hpp PhoneBook.class.hpp
+HEADER		= Zombie.hpp
 
 #Colors:
 GREEN		=	\e[92;5;118m
