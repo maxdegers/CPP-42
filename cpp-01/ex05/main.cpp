@@ -6,13 +6,13 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 10:27:37 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/09/06 15:58:28 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/09/10 12:48:22 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
-int main() {
+int main(void) {
     Harl harl;
 
     std::cout << "Testing DEBUG level:" << std::endl;

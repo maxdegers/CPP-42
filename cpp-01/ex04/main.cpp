@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 10:27:37 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/09/06 15:46:28 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/09/10 13:29:56 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,13 @@
 #include <fstream>
 #include <string>
 
+/**
+ * @brief 
+ * 
+ * @param content 
+ * @param s1 
+ * @param s2 
+ */
 void replace_occurrences(std::string &content, const std::string &s1, const std::string &s2) {
     size_t pos = 0;
 	

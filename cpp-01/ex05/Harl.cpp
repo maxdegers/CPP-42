@@ -6,34 +6,63 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 15:52:08 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/09/06 16:01:42 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/09/10 13:30:58 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
-Harl::Harl(){
+/**
+ * @brief Construct a new Harl:: Harl object
+ * 
+ */
+Harl::Harl( void ){
 }
 
-Harl::~Harl(){
+/**
+ * @brief Destroy the Harl:: Harl object
+ * 
+ */
+Harl::~Harl( void ){
 }
 
-void Harl::debug(void){
+/**
+ * @brief 
+ * 
+ */
+void Harl::debug( void ){
     std::cout << "I love having extra bacon for my 7XL-double-cheese-triple-pickle-special-ketchup burger. I really do!" << std::endl;
 }
 
-void Harl::info(void){
+/**
+ * @brief 
+ * 
+ */
+void Harl::info( void ){
     std::cout << "I cannot believe adding extra bacon costs more money. You didn’t put enough bacon in my burger! If you did, I wouldn’t be asking for more!" << std::endl;
 }
 
-void Harl::warning(void){
+/**
+ * @brief 
+ * 
+ */
+void Harl::warning( void ){
     std::cout << "I think I deserve to have some extra bacon for free. I’ve been coming for years whereas you started working here since last month." << std::endl;
 }
 
-void Harl::error(void){
+/**
+ * @brief 
+ * 
+ */
+void Harl::error( void ){
     std::cout << "This is unacceptable! I want to speak to the manager now." << std::endl;
 }
 
+/**
+ * @brief 
+ * 
+ * @param level 
+ */
 void Harl::complain(std::string level){
     void (Harl::*complaints[])(void) = { &Harl::debug, &Harl::info, &Harl::warning, &Harl::error };
     std::string levels[] = { "DEBUG", "INFO", "WARNING", "ERROR" };
