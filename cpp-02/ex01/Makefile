@@ -6,12 +6,12 @@
 #    By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/05 10:27:48 by mbrousse          #+#    #+#              #
-#    Updated: 2024/09/11 15:41:29 by mbrousse         ###   ########.fr        #
+#    Updated: 2024/09/10 12:57:32 by mbrousse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME		= test-ex00
+NAME		= test-ex01
 	
 CC			= c++
 FLAGS		= -Wall -Wextra -Werror -std=c++98
