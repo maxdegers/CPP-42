@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 12:56:52 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/09/11 15:43:47 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/09/11 15:53:01 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,15 @@ Fixed& Fixed::operator=(const Fixed &src)
 	if (this != &src)
 		this->_value = src.getRawBits();
 	return (*this);
+}
+
+Fixed::Fixed(const int value) : _value(value << this->_fractBits){
+	std::cout << "Int constructor called" << std::endl;
+}
+
+Fixed::Fixed(const float n) : _value(roundf(n * (1 << this->_fractBits)))
+{
+	std::cout << "Float constructor called" << std::endl;
 }
 
 /**

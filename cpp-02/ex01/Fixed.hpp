@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 12:56:59 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/09/11 15:43:36 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/09/11 15:53:54 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define FIXED_HPP
 
 #include <iostream>
+#include <cmath>
+#include <sstream>
 
 class Fixed
 {
@@ -24,12 +26,12 @@ public:
 	Fixed();
 	~Fixed();
 	Fixed(const Fixed& cpy);
+	Fixed( const int intValue);
+	Fixed( const float floatValue);
 	Fixed& operator=(const Fixed &src);
 	int getRawBits(void) const;
 	void setRawBits(int const raw);
 };
-
-
 
 
 
