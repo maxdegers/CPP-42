@@ -6,12 +6,11 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 10:27:37 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/09/11 15:42:11 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/09/16 09:44:33 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-#include <iostream>
 
 int main( void ) {
     Fixed a;
