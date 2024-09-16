@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 10:27:37 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/09/16 10:45:57 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/09/16 13:04:09 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,17 +25,17 @@ void replace_occurrences(std::string &content, const std::string &s1, const std:
 }
 
 int main(int argc, char **argv) {
-    std::string filename = argv[1];
-    std::string s1 = argv[2];
-    std::string s2 = argv[3];
-    std::string content;
-    std::string line;
 	
     if (argc != 4) {
         std::cerr << "Usage: " << argv[0] << " <filename> <string_to_replace> <replacement_string>" << std::endl;
         return 1;
     }
 
+    std::string filename = argv[1];
+    std::string s1 = argv[2];
+    std::string s2 = argv[3];
+    std::string content;
+    std::string line;
 
     std::ifstream infile(filename.c_str());
     if (!infile) {

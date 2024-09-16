@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 14:22:01 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/09/04 09:59:11 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/09/16 13:02:07 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
  * It creates a zombie, name it, and the zombie announces itself
  */
 void randomChump( std::string name ){
-    Zombie *zombie = newZombie(name);
-    zombie->announce();
-    delete(zombie);
+    Zombie zombie(name);
+    zombie.announce();
 }
