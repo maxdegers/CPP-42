@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/05 10:27:37 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/09/18 14:06:50 by mbrousse         ###   ########.fr       */
+/*   Created: 2024/09/18 10:58:42 by mbrousse          #+#    #+#             */
+/*   Updated: 2024/09/18 14:04:56 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef SCAVTRAP_HPP
+#define SCAVTRAP_HPP
+
 #include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
 
-int main(void) {
-  ClapTrap Mike("Mike");
-  ClapTrap Jo("Jo");
-  ScavTrap Rog("Rog");
+class ScavTrap : public ClapTrap{
+public:
+	ScavTrap(std::string name);
+	ScavTrap(const ScavTrap &src);
+	ScavTrap(void);
+	ScavTrap &operator=(const ScavTrap &src);
+	
+	~ScavTrap(void);
 
-  Rog.guardGate();
+	void guardGate(void);
 
-  Jo.attack("Rog");
-  Mike.attack("Rog");
+	void attack(const std::string &target);
+	void beRepaired(unsigned int amount);
+	void takeDamage(unsigned int amount);
+};
 
-  Rog.beRepaired(20);
-  
-  Rog.attack("Jo");
-  Jo.takeDamage(20);
-  Rog.attack("Mike");
-  Mike.takeDamage(20);
-
-  return (0);
-}
+#endif
