@@ -6,11 +6,10 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 10:27:37 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/09/18 14:06:50 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/09/18 16:35:25 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 
 int main(void) {
@@ -23,12 +22,15 @@ int main(void) {
   Jo.attack("Rog");
   Mike.attack("Rog");
 
+  Rog.takeDamage(Jo.get_attackDamage());
+  Rog.takeDamage(Mike.get_attackDamage());
+
   Rog.beRepaired(20);
   
   Rog.attack("Jo");
-  Jo.takeDamage(20);
+  Jo.takeDamage(Rog.get_attackDamage());
   Rog.attack("Mike");
-  Mike.takeDamage(20);
+  Mike.takeDamage(Rog.get_attackDamage());
 
   return (0);
 }

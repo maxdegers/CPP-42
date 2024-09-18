@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 10:58:15 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/09/18 16:21:50 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/09/18 16:47:55 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ ScavTrap::~ScavTrap( void ){
 
 
 void ScavTrap::guardGate(void) {
-  std::cout << CYAN "ScavTrap :" NC << BLUE << this->_name << NC  << " is now in gatekeeper mode"
+  std::cout << CYAN "ScavTrap :" NC << BLUE << this->_name << GREEN " is now in gatekeeper mode" NC
             << std::endl;
 }
 

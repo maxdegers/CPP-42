@@ -6,12 +6,12 @@
 #    By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/05 10:27:48 by mbrousse          #+#    #+#              #
-#    Updated: 2024/09/18 10:54:50 by mbrousse         ###   ########.fr        #
+#    Updated: 2024/09/18 16:27:00 by mbrousse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME		= test-ex00
+NAME		= test-ex02
 	
 CC			= c++
 FLAGS		= -Wall -Wextra -Werror -std=c++98
@@ -19,11 +19,11 @@ RM			= rm -rf
 
 OBJDIR = .objFiles
 
-FILES		= main
+FILES		= main ClapTrap ScavTrap FragTrap
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		=  
+HEADER		=  ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
 
 #Colors:
 GREEN		=	\e[92;5;118m
