@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 12:56:59 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/09/18 09:53:05 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/09/18 10:00:45 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 #include <iostream>
 #include <cmath>
-#include <sstream>
 
 class Fixed
 {
@@ -25,6 +24,9 @@ private:
 public:
 	Fixed();
 	Fixed(const Fixed& cpy);
+	Fixed(const int value);
+	Fixed(const float value);
+	
 	Fixed& operator=(const Fixed &src);
 
 	~Fixed();
