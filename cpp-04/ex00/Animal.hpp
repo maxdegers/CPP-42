@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 16:54:34 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/09/18 17:14:31 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/09/19 11:18:08 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,19 @@
 
 class Animal
 {
-protected:
-    std::string _type = "Poney";
-	std::string _sond = "";
-public:
-    Animal( std::string type );
-	Animal( const Animal &src );
-	Animal( void );
-	Animal &operator=( const Animal &src );
+	protected:
+		std::string _type = "Poney";
+		std::string _sond = "HI HAN HI HAN !!";
+		
+	public:
+		Animal( std::string type );
+		Animal( const Animal &src );
+		Animal( void );
+		Animal &operator=( const Animal &src );
 
-	~Animal( void );
+		~Animal( void );
 
-	void makeSound( void );
+		virtual void makeSound( void ) const;
 };
 
 #endif

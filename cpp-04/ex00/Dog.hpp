@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 17:01:58 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/09/18 17:12:11 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/09/19 10:59:05 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ public:
 
 	~Dog( void );
 
-    void makeSound( void );
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 16:58:00 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/09/18 17:00:02 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/09/19 11:03:13 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,8 @@ Animal& Animal::operator=( const Animal &src ){
 
 Animal::~Animal( void ){
 	std::cout << "Animal destroyed" << std::endl;
+}
+
+void 	Animal::makeSound( void ){
+	std::cout << _sond << std::endl;
 }

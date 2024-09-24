@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 10:27:37 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/09/18 17:08:12 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/09/19 11:05:36 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,20 +30,20 @@ int main() {
 	dog->makeSound();
 	delete dog;
 	cout << "---------------------" << endl << endl;
-	cout << "----- TEST WRONGANIMAL ------" << endl;
-	const WrongAnimal* wronganimal = new WrongAnimal();
-	wronganimal->makeSound();
-	delete wronganimal;
-	cout << "---------------------" << endl << endl;	
-	cout << "----- TEST WRONGCAT ------" << endl;
-	const WrongCat* wrongcat = new WrongCat();
-	wrongcat->makeSound();
-	delete wrongcat;
-	cout << "---------------------" << endl << endl;
-	cout << "----- TEST WRONGCAT AS WRONGANIMAL ------" << endl;
-	WrongAnimal *animals = new WrongCat;
-	animals->makeSound();
-	delete animals;
-	cout << "---------------------" << endl << endl;
+	// cout << "----- TEST WRONGANIMAL ------" << endl;
+	// const WrongAnimal* wronganimal = new WrongAnimal();
+	// wronganimal->makeSound();
+	// delete wronganimal;
+	// cout << "---------------------" << endl << endl;	
+	// cout << "----- TEST WRONGCAT ------" << endl;
+	// const WrongCat* wrongcat = new WrongCat();
+	// wrongcat->makeSound();
+	// delete wrongcat;
+	// cout << "---------------------" << endl << endl;
+	// cout << "----- TEST WRONGCAT AS WRONGANIMAL ------" << endl;
+	// WrongAnimal *animals = new WrongCat;
+	// animals->makeSound();
+	// delete animals;
+	// cout << "---------------------" << endl << endl;
 	return (0);
 }

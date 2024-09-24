@@ -6,7 +6,7 @@
 #    By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/05 10:27:48 by mbrousse          #+#    #+#              #
-#    Updated: 2024/09/18 16:27:00 by mbrousse         ###   ########.fr        #
+#    Updated: 2024/09/19 11:05:16 by mbrousse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,11 +19,11 @@ RM			= rm -rf
 
 OBJDIR = .objFiles
 
-FILES		= main ClapTrap ScavTrap FragTrap
+FILES		= main Animal
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		=  ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
+HEADER		=  Animal.hpp Dog.hpp Cat.hpp
 
 #Colors:
 GREEN		=	\e[92;5;118m
