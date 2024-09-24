@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 10:27:37 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/09/19 11:05:36 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/09/24 10:19:48 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,35 +15,41 @@
 #include "WrongCat.hpp"
 
 int main() {
-	cout << "----- TEST ANIMAL ------" << endl;
+	std::cout << "----- TEST ANIMAL ------" << std::endl;
 	const Animal* animal = new Animal();
 	animal->makeSound();
+	std::cout << "Type : " << animal->getType() << std::endl;
 	delete animal;
-	cout << "---------------------" << endl << endl;	
-	cout << "----- TEST CAT ------" << endl;
+	std::cout << "---------------------" << std::endl << std::endl;	
+	std::cout << "----- TEST CAT ------" << std::endl;
 	const Animal* cat = new Cat();
 	cat->makeSound();
+	std::cout << "Type : " << cat->getType() << std::endl;
 	delete cat;
-	cout << "---------------------" << endl << endl;
-	cout << "----- TEST DOG ------" << endl;
+	std::cout << "---------------------" << std::endl << std::endl;
+	std::cout << "----- TEST DOG ------" << std::endl;
 	const Animal* dog = new Dog();
 	dog->makeSound();
+	std::cout << "Type : " << dog->getType() << std::endl;
 	delete dog;
-	cout << "---------------------" << endl << endl;
-	// cout << "----- TEST WRONGANIMAL ------" << endl;
-	// const WrongAnimal* wronganimal = new WrongAnimal();
-	// wronganimal->makeSound();
-	// delete wronganimal;
-	// cout << "---------------------" << endl << endl;	
-	// cout << "----- TEST WRONGCAT ------" << endl;
-	// const WrongCat* wrongcat = new WrongCat();
-	// wrongcat->makeSound();
-	// delete wrongcat;
-	// cout << "---------------------" << endl << endl;
-	// cout << "----- TEST WRONGCAT AS WRONGANIMAL ------" << endl;
-	// WrongAnimal *animals = new WrongCat;
-	// animals->makeSound();
-	// delete animals;
-	// cout << "---------------------" << endl << endl;
+	std::cout << "---------------------" << std::endl << std::endl;
+	std::cout << "----- TEST WRONGANIMAL ------" << std::endl;
+	const WrongAnimal* wronganimal = new WrongAnimal();
+	wronganimal->makeSound();
+	std::cout << "Type : " << wronganimal->getType() << std::endl;
+	delete wronganimal;
+	std::cout << "---------------------" << std::endl << std::endl;	
+	std::cout << "----- TEST WRONGCAT ------" << std::endl;
+	const WrongCat* wrongcat = new WrongCat();
+	wrongcat->makeSound();
+	std::cout << "Type : " << wrongcat->getType() << std::endl;
+	delete wrongcat;
+	std::cout << "---------------------" << std::endl << std::endl;
+	std::cout << "----- TEST WRONGCAT AS WRONGANIMAL ------" << std::endl;
+	WrongAnimal *animals = new WrongCat;
+	animals->makeSound();
+	std::cout << "Type : " << animals->getType() << std::endl;
+	delete animals;
+	std::cout << "---------------------" << std::endl << std::endl;
 	return (0);
 }

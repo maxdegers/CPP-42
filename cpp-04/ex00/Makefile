@@ -6,7 +6,7 @@
 #    By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/05 10:27:48 by mbrousse          #+#    #+#              #
-#    Updated: 2024/09/19 11:05:16 by mbrousse         ###   ########.fr        #
+#    Updated: 2024/09/24 10:18:05 by mbrousse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,11 +19,11 @@ RM			= rm -rf
 
 OBJDIR = .objFiles
 
-FILES		= main Animal
+FILES		= main Animal Dog Cat WrongCat WrongAnimal
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		=  Animal.hpp Dog.hpp Cat.hpp
+HEADER		=  Animal.hpp Dog.hpp Cat.hpp WrongCat.hpp WrongAnimal.hpp
 
 #Colors:
 GREEN		=	\e[92;5;118m

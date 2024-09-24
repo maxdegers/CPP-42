@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 17:01:58 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/09/19 10:59:05 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/09/24 09:59:58 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@
 
 class Dog : public Animal{
 public:
-    Dog( std::string type );
 	Dog( const Dog &src );
 	Dog( void );
 	Dog &operator=( const Dog &src );
 
 	~Dog( void );
 
+	void makeSound(void) const;
 };
 
 #endif
