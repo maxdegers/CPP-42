@@ -6,24 +6,24 @@
 #    By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/05 10:27:48 by mbrousse          #+#    #+#              #
-#    Updated: 2024/09/24 10:22:18 by mbrousse         ###   ########.fr        #
+#    Updated: 2024/09/24 10:50:40 by mbrousse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME		= test-ex00
+NAME		= test-ex01
 	
 CC			= c++
-FLAGS		= -Wall -Wextra -Werror -std=c++98
+FLAGS		= -Wall -Wextra -Werror -std=c++98 -g3
 RM			= rm -rf
 
 OBJDIR = .objFiles
 
-FILES		= main Animal Dog Cat WrongCat WrongAnimal
+FILES		= main Animal Dog Cat Brain
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		=  Animal.hpp Dog.hpp Cat.hpp WrongCat.hpp WrongAnimal.hpp
+HEADER		=  Animal.hpp Dog.hpp Cat.hpp Brain.hpp
 
 #Colors:
 GREEN		=	\e[92;5;118m
