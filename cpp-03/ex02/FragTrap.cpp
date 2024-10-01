@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 16:11:47 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/09/18 16:49:53 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/10/01 09:06:57 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ FragTrap::FragTrap( const FragTrap &src ) : ClapTrap(src){
   	std::cout << "FragTrap copy constructor called" << std::endl;
 }
 FragTrap::FragTrap( void ){
+	_name = "Unknown FragTrap";
 	_hitPoints = 100;
 	_energyPoints = 100;
 	_attackDamage = 30;

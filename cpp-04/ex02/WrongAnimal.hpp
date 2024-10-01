@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 10:12:40 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/09/24 10:13:20 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/10/01 09:24:26 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class WrongAnimal
 
 		virtual ~WrongAnimal(void);
 
-		virtual void makeSound(void) const;
+		void makeSound(void) const;
 		
   		std::string getType(void) const;
 };

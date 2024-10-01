@@ -6,13 +6,13 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 12:56:52 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/09/16 10:45:48 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/10/01 08:50:34 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-Fixed::Fixed(){
+Fixed::Fixed() : _value(0){
     std::cout << "Default constructor called" << std::endl;
 }
 

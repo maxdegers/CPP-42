@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 10:58:15 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/09/18 16:47:55 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/10/01 09:06:50 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ ScavTrap::ScavTrap( const ScavTrap &src ) : ClapTrap(src){
   	std::cout << "ScavTrap copy constructor called" << std::endl;
 }
 ScavTrap::ScavTrap( void ){
+	_name = "Unknown ScavTrap";
 	_hitPoints = 100;
 	_energyPoints = 50;
 	_attackDamage = 20;

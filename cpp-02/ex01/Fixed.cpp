@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 12:56:52 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/09/18 10:00:53 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/10/01 08:49:51 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
  */
 Fixed::Fixed(){
     std::cout << "Default constructor called" << std::endl;
+	_value = 0;
 }
 
 /**

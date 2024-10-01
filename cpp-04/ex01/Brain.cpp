@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 10:25:22 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/09/24 11:36:15 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/10/01 09:23:28 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Brain::Brain( const Brain &src ){
 Brain& Brain::operator=( const Brain &src ){
 	if (this != &src)
 	{
-		for (int i = 0; 1 < 100; i++)
+		for (int i = 0; i < 100; i++)
 			_ideas[i] = src._ideas[i];
 	}
 	std::cout << "Brain copy constructor called" << std::endl;

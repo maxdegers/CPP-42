@@ -1,38 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.hpp                                       :+:      :+:    :+:   */
+/*   Cure.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/25 09:45:09 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/10/01 08:30:16 by mbrousse         ###   ########.fr       */
+/*   Created: 2024/10/01 08:17:00 by mbrousse          #+#    #+#             */
+/*   Updated: 2024/10/01 08:30:43 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AMATERIA_HPP
-#define AMATERIA_HPP
+#ifndef CURE_HPP
+#define CURE_HPP
 
-#include "ICharacter.hpp"
-#include <iostream>
+#include "AMateria.hpp"
 
-class AMateria
+class Cure : AMateria
 {
 private:
-	std::string _type;
-
 public:
-	AMateria(void);
-	AMateria(std::string const &type);
-	AMateria(const AMateria &src);
-	AMateria &operator=(const AMateria &src);
+	Cure(void);
+	Cure(const Cure &src);
+	Cure &operator=(const Cure &src);
 
-	virtual ~AMateria();
+	~Cure();
 
-	virtual AMateria *clone() const = 0;
-	virtual void use(ICharacter &target);
-
-	std::string const &getType(void) const;
+	AMateria *clone() const;
+	void use(ICharacter &target);
 };
 
-#endif
+#endif // Cure_HPP

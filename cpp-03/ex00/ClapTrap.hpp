@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 11:43:18 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/09/18 10:33:43 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/10/01 08:56:15 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@ public:
 	void takeDamage( unsigned int amount );
 	void beRepaired( unsigned int amount );
 
+	ClapTrap( void );
 	ClapTrap( std::string name );
 	ClapTrap( const ClapTrap &src );
-	ClapTrap( void );
 	ClapTrap &operator=( const ClapTrap &src );
 
 	~ClapTrap( void );

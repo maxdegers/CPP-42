@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 10:04:44 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/09/18 10:43:09 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/10/01 09:06:32 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ ClapTrap::ClapTrap( const ClapTrap &src ) :
   std::cout << "ClapTrap copy constructor called" << std::endl;
 }
 ClapTrap::ClapTrap( void ) : 
+						_name ("Unknown ClapTrap"),
 						_hitPoints(10), 
 						_energyPoints(10), 
 						_attackDamage(0){

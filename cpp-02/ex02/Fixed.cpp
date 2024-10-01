@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 10:26:32 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/09/16 10:45:04 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/10/01 08:47:53 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ std::ostream &operator<<(std::ostream &out, const Fixed &fixed){
 
 Fixed::Fixed(){
 	// std::cout << "Default constructor called" << std::endl;
+	_value = 0;
 }
 
 
