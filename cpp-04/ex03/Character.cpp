@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 18:18:42 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/10/01 08:29:57 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/10/01 12:44:16 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,7 @@ Character::Character(const Character &src) : _name(src._name)
 {
 	for (int i = 0; i < 4; i++)
 	{
-		delete this->_inventory[i];
-		this->_inventory[i] = src._inventory[i];
+		this->_inventory[i] = src._inventory[i]->clone();
 	}
 }
 Character &Character::operator=(const Character &src)
@@ -37,7 +36,7 @@ Character &Character::operator=(const Character &src)
 		for (int i = 0; i < 4; i++)
 		{
 			delete this->_inventory[i];
-			this->_inventory[i] = src._inventory[i];
+			this->_inventory[i] = src._inventory[i]->clone();
 		}
 		_name = src._name;
 	}

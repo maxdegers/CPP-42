@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 08:17:00 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/10/01 08:30:43 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/10/01 12:34:35 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "AMateria.hpp"
 
-class Cure : AMateria
+class Cure : public AMateria
 {
 private:
 public:

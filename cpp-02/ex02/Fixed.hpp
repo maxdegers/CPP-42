@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 12:56:59 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/09/16 10:41:16 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/10/01 16:51:05 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,10 @@ public:
 	bool	operator==(const Fixed &other) const;
 	bool	operator!=(const Fixed &other) const;
 
-	float	operator+(const Fixed &other) const;
-	float	operator-(const Fixed &other) const;
-	float	operator*(const Fixed &other) const;
-	float	operator/(const Fixed &other) const;
+	Fixed	operator+(const Fixed &other) const;
+	Fixed	operator-(const Fixed &other) const;
+	Fixed	operator*(const Fixed &other) const;
+	Fixed	operator/(const Fixed &other) const;
 
 	Fixed	operator++();
 	Fixed	operator++(int);

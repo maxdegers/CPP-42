@@ -6,13 +6,13 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 10:27:37 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/10/01 08:30:58 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/10/01 12:32:17 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
 #include "Cure.hpp"
-#include "TheBearer.hpp"
+// #include "TheBearer.hpp"
 #include "ICharacter.hpp"
 #include "IMateriaSource.hpp"
 #include "Ice.hpp"

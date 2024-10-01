@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 10:26:32 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/10/01 08:47:53 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/10/01 16:57:47 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,20 +99,28 @@ bool	Fixed::operator!=(const Fixed &other) const{
 
 
 
-float	Fixed::operator+(const Fixed &other) const{
-	return (this->toFloat() + other.toFloat());
+Fixed	Fixed::operator+(const Fixed &other) const{
+	Fixed tmp;
+	tmp.setRawBits(this->getRawBits() + other.getRawBits());
+	return tmp;
 }
 
-float	Fixed::operator-(const Fixed &other) const{
-	return (this->toFloat() - other.toFloat());
+Fixed	Fixed::operator-(const Fixed &other) const{
+	Fixed tmp;
+	tmp.setRawBits(this->getRawBits() - other.getRawBits());
+	return tmp;
 }
 
-float	Fixed::operator*(const Fixed &other) const{
-	return (this->toFloat() * other.toFloat());
+Fixed	Fixed::operator*(const Fixed &other) const{
+	Fixed tmp;
+	tmp.setRawBits((long long)(this->getRawBits() * other.getRawBits() / (1 << _fractBits)));
+	return tmp;
 }
 
-float	Fixed::operator/(const Fixed &other) const{
-	return (this->toFloat() / other.toFloat());
+Fixed	Fixed::operator/(const Fixed &other) const{
+	Fixed tmp;
+	tmp.setRawBits((long long)(this->getRawBits() * (1 << _fractBits) / other.getRawBits()));
+	return tmp;
 }
 
 
@@ -140,17 +148,17 @@ Fixed	Fixed::operator--(int){
 }
 
 Fixed		&Fixed::min(Fixed &a, Fixed &b){
-	return (a.toFloat() < b.toFloat() ? a : b);
+	return (a < b ? a : b);
 }
 
 const Fixed	&Fixed::min(const Fixed &a, const Fixed &b){
-	return (a.toFloat() < b.toFloat() ? a : b);
+	return (a < b ? a : b);
 }
 
 Fixed		&Fixed::max(Fixed &a, Fixed &b){
-	return (a.toFloat() > b.toFloat() ? a : b);
+	return (a > b ? a : b);
 }
 
 const Fixed	&Fixed::max(const Fixed &a, const Fixed &b){
-	return (a.toFloat() > b.toFloat() ? a : b);
+	return (a > b ? a : b);
 }

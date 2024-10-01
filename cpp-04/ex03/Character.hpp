@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 18:14:15 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/10/01 08:30:32 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/10/01 12:35:40 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include "ICharacter.hpp"
 #include <iostream>
 
-class Character
+class Character : public ICharacter
 {
 private:
 	std::string _name;
@@ -25,7 +25,7 @@ private:
 
 public:
 	Character(void);
-	Character(const std::string &name);
+	Character(const  std::string &name);
 	Character(const Character &src);
 	Character &operator=(const Character &src);
 
