@@ -6,24 +6,24 @@
 #    By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/05 10:27:48 by mbrousse          #+#    #+#              #
-#    Updated: 2024/09/25 09:16:04 by mbrousse         ###   ########.fr        #
+#    Updated: 2024/10/01 17:56:12 by mbrousse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 NAME		= test-ex03
 	
-CC			= c++
-FLAGS		= -Wall -Wextra -Werror -std=c++98 -g3
+CXX			= c++
+CXXFLAGS	= -Wall -Wextra -Werror -std=c++98 -g3
 RM			= rm -rf
 
 OBJDIR = .objFiles
 
-FILES		= main
+FILES		= main AMateria Ice Cure MateriaSource Character
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		=  
+HEADER		=  AMateria.hpp Ice.hpp Cure.hpp MateriaSource.hpp Character.hpp IMateriaSource.hpp ICharacter.hpp
 
 #Colors:
 GREEN		=	\e[92;5;118m
@@ -35,12 +35,12 @@ CURSIVE		=	\e[33;3m
 all: $(NAME)
 
 $(NAME): $(OBJ) $(HEADER)
-	@$(CC) $(OBJ) -o $(NAME)
+	@$(CXX) $(OBJ) -o $(NAME)
 	@printf "$(_SUCCESS) $(GREEN)- Executable ready.\n$(RESET)"
 
 $(OBJDIR)/%.o: %.cpp $(HEADER)
 	@mkdir -p $(dir $@)
-	@$(CC) $(FLAGS) $(OPTS) -c $< -o $@
+	@$(CXX) $(CXXFLAGS) $(OPTS) -c $< -o $@
 
 clean:
 	@$(RM) $(OBJDIR) $(OBJ)

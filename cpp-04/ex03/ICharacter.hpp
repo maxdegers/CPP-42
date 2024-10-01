@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 10:01:20 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/10/01 08:30:48 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/10/01 17:51:37 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 #include "AMateria.hpp"
 #include <iostream>
+
+class AMateria;
 
 class ICharacter
 {

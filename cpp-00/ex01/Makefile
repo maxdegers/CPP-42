@@ -6,14 +6,14 @@
 #    By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/21 13:26:12 by mbrousse          #+#    #+#              #
-#    Updated: 2024/08/28 13:11:08 by mbrousse         ###   ########.fr        #
+#    Updated: 2024/10/01 17:55:47 by mbrousse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= PhoneBook
 	
-CC			= c++
-FLAGS		= -Wall -Wextra -Werror -std=c++98
+CXX			= c++
+CXXFLAGS		= -Wall -Wextra -Werror -std=c++98
 RM			= rm -rf
 
 OBJDIR = .objFiles
@@ -34,12 +34,12 @@ CURSIVE		=	\e[33;3m
 all: $(NAME)
 
 $(NAME): $(OBJ) $(HEADER)
-	@$(CC) $(OBJ) -o $(NAME)
+	@$(CXX) $(OBJ) -o $(NAME)
 	@printf "$(_SUCCESS) $(GREEN)- Executable ready.\n$(RESET)"
 
 $(OBJDIR)/%.o: %.cpp $(HEADER)
 	@mkdir -p $(dir $@)
-	@$(CC) $(FLAGS) $(OPTS) -c $< -o $@
+	@$(CXX) $(CXXFLAGS) $(OPTS) -c $< -o $@
 
 clean:
 	@$(RM) $(OBJDIR) $(OBJ)

@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 18:18:42 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/10/01 12:44:16 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/10/01 18:00:59 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,14 +81,12 @@ void Character::unequip(int idx)
 }
 void Character::use(int idx, ICharacter &target)
 {
-	if (this->_inventory[idx])
-	{
-		this->_inventory[idx]->use(target);
-	}
-	else
+	if (idx >= 4 || idx < 0 || !this->_inventory[idx])
 	{
 		std::cout << this->getName() << " doesn't have any item here" << std::endl;
 	}
+	else
+		this->_inventory[idx]->use(target);
 }
 
 std::string const &Character::getName(void) const

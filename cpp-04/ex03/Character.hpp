@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 18:14:15 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/10/01 12:35:40 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/10/01 17:53:33 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class Character : public ICharacter
 private:
 	std::string _name;
 	AMateria *_inventory[4];
+	// AMateria *_bin[100];
 
 public:
 	Character(void);

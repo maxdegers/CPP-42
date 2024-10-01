@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 09:45:09 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/10/01 08:30:16 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/10/01 17:45:27 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 class AMateria
 {
-private:
+protected:
 	std::string _type;
 
 public:

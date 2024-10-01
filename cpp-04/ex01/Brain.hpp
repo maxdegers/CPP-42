@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 10:25:26 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/09/24 10:31:10 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/10/01 17:11:45 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ public:
 	Brain &operator=(Brain const &src);
 	
 	~Brain( void );
+
 };
 
 #endif
