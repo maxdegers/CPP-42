@@ -6,7 +6,7 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 10:26:32 by mbrousse          #+#    #+#             */
-/*   Updated: 2024/10/01 16:57:47 by mbrousse         ###   ########.fr       */
+/*   Updated: 2024/10/07 08:56:58 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,7 +119,7 @@ Fixed	Fixed::operator*(const Fixed &other) const{
 
 Fixed	Fixed::operator/(const Fixed &other) const{
 	Fixed tmp;
-	tmp.setRawBits((long long)(this->getRawBits() * (1 << _fractBits) / other.getRawBits()));
+	tmp.setRawBits((long long)((this->getRawBits() << _fractBits) / other.getRawBits()));
 	return tmp;
 }
 
