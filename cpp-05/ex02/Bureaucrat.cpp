@@ -58,7 +58,7 @@ void Bureaucrat::check_grade(int grade) {
 		throw Bureaucrat::GradeTooLowException();
 }
 
-void Bureaucrat::signForm(Form &form) {
+void Bureaucrat::signForm(AForm &form) {
 	try {
 		form.beSigned(*this);
 		std::cout << _name << " signed " << form.getName() << "." << std::endl;
@@ -67,6 +67,8 @@ void Bureaucrat::signForm(Form &form) {
 		std::cout << _name << " couldn't sign " << form.getName() << " because the grade is too low!" << std::endl;
 	}
 }
+
+// void Bureaucrat::executeForm(const AForm &form) const {
 
 // Exceptions
 

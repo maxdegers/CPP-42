@@ -9,26 +9,20 @@ class Bureaucrat;
 
 class Form {
 private:
-    const std::string _name;
-    bool _isSigned;
-    const int _gradeToSign;
-    const int _gradeToExecute;
+    const std::string   _name;
+    bool                _isSigned;
+    const int           _gradeToSign;
+    const int           _gradeToExecute;
 
 public:
-    // Exceptions
-    class GradeTooHighException : public std::exception {
-    public:
-        const char* what() const throw();
-    };
+    // Constructor
+    Form(const std::string &name, int eg, int sg);
+	Form();
+	Form (const Form &origine);
+	Form &operator=(const Form &origine);
 
-    class GradeTooLowException : public std::exception {
-    public:
-        const char* what() const throw();
-    };
-
-    // Constructor & Destructor
-    Form(const std::string& name, int gradeToSign, int gradeToExecute);
-    ~Form();
+    // Destructor
+	~Form();
 
     // Getters
     const std::string& getName() const;
@@ -39,8 +33,17 @@ public:
     // Methods
     void beSigned(const Bureaucrat& bureaucrat);
 
-    // Overload << operator
-    friend std::ostream& operator<<(std::ostream& os, const Form& form);
+    // Exceptions
+    class GradeTooHighException : public std::exception {
+	public:
+		const char* what() const throw();
+	};
+	class GradeTooLowException : public std::exception {
+	public:
+		const char* what() const throw();
+	};
 };
+
+std::ostream &operator << (std::ostream &out, const Form &c);
 
 #endif

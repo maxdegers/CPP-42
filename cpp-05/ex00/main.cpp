@@ -1,35 +1,40 @@
 #include "Bureaucrat.hpp"
 
 int main() {
-	try {
-		Bureaucrat john("John", 150);
-		std::cout << john << std::endl;
-
-		john.decrementGrade();
-	} catch (std::exception& e) {
-		std::cerr << e.what() << std::endl;
+	Bureaucrat k("BG1", 150);
+	std::cout << k << std::endl;
+	std::cout << "---INCREMENT---" << std::endl;
+	try{
+		k.incrementGrade();
 	}
-
-	try {
-		Bureaucrat jane("Jane", 1);
-		std::cout << jane << std::endl;
-
-		jane.incrementGrade();
-	} catch (std::exception& e) {
-		std::cerr << e.what() << std::endl;
+	catch (std::exception &e) {
+		std::cerr << "Exception : " << e.what() << std::endl;
 	}
-
-	try {
-		Bureaucrat invalid("Invalid", 0);
-	} catch (std::exception& e) {
-		std::cerr << e.what() << std::endl;
+	std::cout << k << std::endl;
+	Bureaucrat g(k);
+	std::cout << g << std::endl;
+	std::cout << "---INCREMENT---" << std::endl;
+	try{
+	g.decrementGrade();
+	g.decrementGrade();
 	}
-
-	try {
-		Bureaucrat invalid("Invalid", 151);
-	} catch (std::exception& e) {
-		std::cerr << e.what() << std::endl;
+	catch (std::exception &e) {
+		std::cerr << "Exception : " << e.what() << std::endl;
 	}
-
-	return 0;
+	try{
+	std::cout << g << std::endl;
+	Bureaucrat b;
+	g = b;
+	std::cout << b << std::endl;
+	std::cout << "---DECREMENT---" << std::endl;
+	b.decrementGrade();
+	std::cout << b << std::endl;
+	g.incrementGrade();
+	std::cout << g << std::endl;
+	std::cout << g << std::endl;
+	std::cout << b << std::endl;
+	}
+	catch (std::exception &e) {
+		std::cerr << "Exception : " << e.what() << std::endl;
+	}
 }
