@@ -10,7 +10,7 @@ FILES		= main Bureaucrat AForm PresidentialPardonForm RobotomyRequestForm Shrubb
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		=  Bureaucrat.hpp				\
+HEADER		=  	Bureaucrat.hpp				\
 				AForm.hpp					\
 				PresidentialPardonForm.hpp	\
 				RobotomyRequestForm.hpp		\

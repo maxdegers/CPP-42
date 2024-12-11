@@ -7,22 +7,22 @@ int main()
 {
 	try {
 		std::cout << "---SHRUBBERY---" << std::endl;
-		Bureaucrat first("Toto", 130);
-		ShrubberyCreationForm shrub("Barry");
+		Bureaucrat first("Magelan", 130);
+		ShrubberyCreationForm shrub("Kaan");
 		std::cout << shrub << std::endl;
 		std::cout << first << std::endl;
 		first.signForm(shrub);
 		shrub.execute(first);
 		std::cout << "---ROBOTOMY---" << std::endl;
-		const Bureaucrat sec("Momo", 20);
-		RobotomyRequestForm roboto("Thom");
+		const Bureaucrat sec("Hera", 20);
+		RobotomyRequestForm roboto("Greg");
 		std::cout << roboto << std::endl;
 		std::cout << sec << std::endl;
 		roboto.beSigned(sec);
 		roboto.execute(sec);
 		std::cout << "---PRESIDENTIAL---" << std::endl;
-		const Bureaucrat third("Benji", 4);
-		PresidentialPardonForm presi("Max");
+		const Bureaucrat third("Felon", 4);
+		PresidentialPardonForm presi("Ben");
 		std::cout << presi << std::endl;
 		std::cout << third << std::endl;
 		presi.beSigned(third);

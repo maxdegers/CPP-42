@@ -6,12 +6,14 @@
 
 class AForm;
 
-class Bureaucrat {
+class Bureaucrat 
+{
 private:
 	const std::string   _name;
 	int                 _grade;
 
 public:
+	// Constructor
 	Bureaucrat();
 	Bureaucrat(const std::string &name, int grade);
 	Bureaucrat (const Bureaucrat &origin);
@@ -26,12 +28,11 @@ public:
 	// Methods
 	void 				incrementGrade();
 	void 				decrementGrade();
-
 	void				check_grade(int grade);
-	
-	void				signForm(AForm &form);
 	void 				executeForm(const AForm &form) const;
+	void				signForm(AForm &form);
 	
+	// Exceptions
 	class GradeTooHighException : public std::exception {
 	public:
 		const char* what() const throw();
