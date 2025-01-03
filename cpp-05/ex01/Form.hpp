@@ -7,34 +7,29 @@
 
 class Bureaucrat;
 
-class Form {
-private:
-    const std::string   _name;
-    bool                _isSigned;
-    const int           _gradeToSign;
-    const int           _gradeToExecute;
+class Form
+{
+	private:
+		const std::string 	_name;
+		bool				_isSigne;
+		int					_requiredGradeSign;
+		int					_requiredGradeExecute;
+	
+	public:
+		Form();
+		Form(const std::string name, int requiredGradeSign, int requiredGradeExecute);
+		Form &operator=( const Form &src);
 
-public:
-    // Constructor
-    Form(const std::string &name, int eg, int sg);
-	Form();
-	Form (const Form &origine);
-	Form &operator=(const Form &origine);
+		~Form();
 
-    // Destructor
-	~Form();
+		void	getIsSigne();
 
-    // Getters
-    const std::string& getName() const;
-    bool isSigned() const;
-    int getGradeToSign() const;
-    int getGradeToExecute() const;
+		void	beSigned( Bureaucrat bureaucrat);
 
-    // Methods
-    void beSigned(const Bureaucrat& bureaucrat);
+		void	checkGrade(int grade);
 
-    // Exceptions
-    class GradeTooHighException : public std::exception {
+	// Exceptions
+	class GradeTooHighException : public std::exception {
 	public:
 		const char* what() const throw();
 	};

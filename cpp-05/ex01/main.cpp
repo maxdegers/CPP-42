@@ -3,8 +3,8 @@
 
 int main() {
     try {
-        Bureaucrat alice("Alice", 2);
-        Bureaucrat bob("Bob", 150);
+        Bureaucrat Alice("Alice", 2);
+        Bureaucrat Bob("Bob", 150);
 
         Form formA("FormA", 3, 50);
         Form formB("FormB", 150, 150);
@@ -12,11 +12,11 @@ int main() {
         std::cout << formA << std::endl;
         std::cout << formB << std::endl;
 
-        alice.signForm(formA);
+        Alice.signForm(formA);
 
-        bob.signForm(formA);
+        Bob.signForm(formA);
 
-        bob.signForm(formB);
+        Bob.signForm(formB);
 
         std::cout << formA << std::endl;
         std::cout << formB << std::endl;

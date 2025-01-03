@@ -45,9 +45,9 @@ void			Bureaucrat::incrementGrade()
 void	Bureaucrat::checkGrade(int grade)
 {
 	if (grade < 1)
-		throw Bureaucrat::GradeTooLowException();
-	if (grade > 150)
 		throw Bureaucrat::GradeTooHighException();
+	if (grade > 150)
+		throw Bureaucrat::GradeTooLowException();
 }
 
 
