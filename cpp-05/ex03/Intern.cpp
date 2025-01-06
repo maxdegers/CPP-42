@@ -52,5 +52,5 @@ AForm *Intern::makeForm(std::string name, std::string target)
 
 const char *Intern::NotAForm::what() const throw()
 {
-	return ("The form name passed as parameter doesn’t exist.");
+	return ("The form name passed as parameter doesn't exist.");
 }
