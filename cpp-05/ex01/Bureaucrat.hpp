@@ -3,29 +3,34 @@
 
 #include <string>
 #include <iostream>
+#include "Form.hpp"
+
+class Form;
 
 class Bureaucrat
 {
 	private:
 		const std::string 	_name;
-		int				_grade;
+		int					_grade;
+		
+		Bureaucrat();
+        Bureaucrat &operator=(const Bureaucrat &src);
 
 	public:
-		Bureaucrat();
+		Bureaucrat(const Bureaucrat &src);
 		Bureaucrat(const std::string& name, int grade);
-        Bureaucrat &operator=(const Bureaucrat &src);
 
         ~Bureaucrat();
 
 		std::string	getName() const;
-		int		getGrade() const;
+		int			getGrade() const;
 
 		void		decrementGrade();
 		void		incrementGrade();
 
 		void 		checkGrade(int grade);
 
-		void		signForm();
+		void		signForm(Form &form);
 
 	
 	class GradeTooHighException : public std::exception

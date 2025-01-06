@@ -9,6 +9,11 @@ Bureaucrat::Bureaucrat(const std::string& name, int grade) : _name(name)
 	this->_grade = grade;
 }
 
+Bureaucrat::Bureaucrat(const Bureaucrat &src) : _name(src._name)
+{
+	_grade = src._grade;
+}
+
 Bureaucrat &Bureaucrat::operator=( const Bureaucrat &src)
 {
 	if (this != &src)
