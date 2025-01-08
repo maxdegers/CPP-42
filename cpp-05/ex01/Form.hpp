@@ -19,7 +19,7 @@ class Form
 	
 	public:
 		Form(const Form &src);
-		Form(const std::string name, int requiredGradeSign, int requiredGradeExecute);
+		Form(const std::string& name, int requiredGradeSign, int requiredGradeExecute);
 
 		~Form();
 
@@ -28,7 +28,7 @@ class Form
 		int			getRequiredGradeSign() const;
 		int			getRequiredGradeExecute() const;
 
-		void		beSigned( Bureaucrat bureaucrat);
+		void		beSigned(const Bureaucrat& bureaucrat);
 
 		void		checkGrade(int grade);
 

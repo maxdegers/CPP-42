@@ -15,7 +15,7 @@ Bureaucrat::Bureaucrat(const Bureaucrat &src) : _name(src._name)
 	_grade = src._grade;
 }
 
-Bureaucrat &Bureaucrat::operator=( const Bureaucrat &src)
+Bureaucrat &Bureaucrat::operator=(const Bureaucrat &src)
 {
 	if (this != &src)
 	{
@@ -39,7 +39,7 @@ void			Bureaucrat::decrementGrade()
 	this->_grade = tmp;
 }
 
-void			Bureaucrat::incrementGrade()
+void	Bureaucrat::incrementGrade()
 {
 	int  tmp = this->getGrade();
 
@@ -48,7 +48,7 @@ void			Bureaucrat::incrementGrade()
 	this->_grade = tmp;
 }
 
-void	Bureaucrat::checkGrade(int grade)
+void	Bureaucrat::checkGrade(int grade) const
 {
 	if (grade < 1)
 		throw Bureaucrat::GradeTooHighException();

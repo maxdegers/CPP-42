@@ -2,7 +2,7 @@
 
 AForm::AForm() : _name("Default-AForm"), _isSigne(false), _requiredGradeSign(150), _requiredGradeExecute(150) {};
 
-AForm::AForm(const std::string name, int requiredGradeSign, int requiredGradeExecute) : _name(name), _isSigne(false), _requiredGradeSign(requiredGradeSign), _requiredGradeExecute(requiredGradeExecute)
+AForm::AForm(const std::string &name, int requiredGradeSign, int requiredGradeExecute) : _name(name), _isSigne(false), _requiredGradeSign(requiredGradeSign), _requiredGradeExecute(requiredGradeExecute)
 {
 	checkGrade(requiredGradeSign);
 	checkGrade(requiredGradeExecute);
@@ -26,7 +26,7 @@ int			AForm::getRequiredGradeExecute() const {return _requiredGradeExecute;}
 
 int			AForm::getRequiredGradeSign() const {return _requiredGradeSign;}
 
-void	AForm::beSigned( Bureaucrat bureaucrat)
+void		AForm::beSigned(Bureaucrat &bureaucrat)
 {
 	if (bureaucrat.getGrade() <= _requiredGradeSign)
 		_isSigne = true;

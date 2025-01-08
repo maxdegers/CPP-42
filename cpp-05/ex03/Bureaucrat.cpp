@@ -48,7 +48,7 @@ void			Bureaucrat::incrementGrade()
 	this->_grade = tmp;
 }
 
-void	Bureaucrat::checkGrade(int grade)
+void	Bureaucrat::checkGrade(int grade) const
 {
 	if (grade < 1)
 		throw Bureaucrat::GradeTooHighException();
@@ -70,7 +70,7 @@ void	Bureaucrat::signForm(AForm &form)
 	
 }
 
-void Bureaucrat::executeForm(AForm const & form)
+void Bureaucrat::executeForm(const AForm &form)
 {
 	try
 	{

@@ -10,14 +10,14 @@ private:
 	std::string	    _target;
 	RobotomyRequestForm();
 	RobotomyRequestForm &operator=(const RobotomyRequestForm &origin);
+	RobotomyRequestForm (const RobotomyRequestForm &origin);
 
 public:
-	RobotomyRequestForm(std::string const &name);
-	RobotomyRequestForm (const RobotomyRequestForm &origin);
+	RobotomyRequestForm(const std::string &name);
 	
 	~RobotomyRequestForm();
 
-	void	execute(Bureaucrat const & executor) const ;
+	void	execute(Bureaucrat const &executor) const ;
 };
 
 #endif

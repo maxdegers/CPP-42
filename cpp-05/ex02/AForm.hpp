@@ -14,26 +14,26 @@ class AForm
 		bool				_isSigne;
 		const int			_requiredGradeSign;
 		const int			_requiredGradeExecute;
-		AForm();
 	
 	protected:
-		void 		checkExecution(const Bureaucrat& executor) const;
+		void 		checkExecution(const Bureaucrat &executor) const;
 		void		checkGrade(int grade) const;
 	
 	public:
-		AForm &operator=( const AForm &src);
+		AForm();
 		AForm(const AForm &src);
-		AForm(const std::string name, int requiredGradeSign, int requiredGradeExecute);
+		AForm &operator=(const AForm &src);
+		AForm(const std::string &name, int requiredGradeSign, int requiredGradeExecute);
 
 		virtual ~AForm();
 
-		bool		getIsSigne() const;
-		std::string	getName() const;
-		int			getRequiredGradeSign() const;
-		int			getRequiredGradeExecute() const;
+		bool			getIsSigne() const;
+		std::string		getName() const;
+		int				getRequiredGradeSign() const;
+		int				getRequiredGradeExecute() const;
 		virtual void	execute(Bureaucrat const & executor) const = 0;
 
-		void			beSigned( Bureaucrat bureaucrat);
+		void			beSigned(Bureaucrat &bureaucrat);
 
 	// Exceptions
 	class GradeTooHighException : public std::exception {

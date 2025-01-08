@@ -5,7 +5,7 @@
 
 Intern::Intern(){}
 
-Intern Intern::operator=(const Intern &src)
+Intern &Intern::operator=(const Intern &src)
 {
     (void)src;
 	return *this;
@@ -26,7 +26,7 @@ static int hashLevel(std::string level) {
 	return (hash);
 }
 
-AForm *Intern::makeForm(std::string name, std::string target)
+AForm *Intern::makeForm(const std::string &name, const std::string &target)
 {
 	switch (hashLevel(name))
 	{

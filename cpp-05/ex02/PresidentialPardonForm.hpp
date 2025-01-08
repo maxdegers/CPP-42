@@ -9,14 +9,14 @@ class PresidentialPardonForm : public AForm
 private:
 	std::string	       _target;
 	PresidentialPardonForm();
-public:
-	PresidentialPardonForm(std::string const &name);
-	PresidentialPardonForm (const PresidentialPardonForm &origin);
 	PresidentialPardonForm &operator=(const PresidentialPardonForm &origin);
+	PresidentialPardonForm (const PresidentialPardonForm &origin);
+public:
+	PresidentialPardonForm(const std::string &name);
 
 	~PresidentialPardonForm();
 
-	void	execute(Bureaucrat const & executor) const ;
+	void	execute(Bureaucrat const &executor) const ;
 };
 
 #endif

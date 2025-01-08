@@ -18,7 +18,7 @@ class Bureaucrat
 
 	public:
 		Bureaucrat(const Bureaucrat &src);
-		Bureaucrat(const std::string& name, int grade);
+		Bureaucrat(const std::string &name, int grade);
 
         ~Bureaucrat();
 
@@ -28,7 +28,7 @@ class Bureaucrat
 		void		decrementGrade();
 		void		incrementGrade();
 
-		void 		checkGrade(int grade);
+		void 		checkGrade(int grade) const;
 
 		void		signForm(Form &form);
 

@@ -7,13 +7,16 @@
 
 class Intern
 {
+    private:
+    Intern(const Intern &src);
+    Intern &operator=(const Intern &src);
+
     public:
     Intern();
-    Intern(const Intern &src);
-    Intern operator=(const Intern &src);
+    
     ~Intern();
 
-    AForm *makeForm(std::string name, std::string target);
+    AForm *makeForm(const std::string &name, const std::string &target);
 
     class NotAForm : public std::exception
     {
@@ -21,7 +24,5 @@ class Intern
 		    const char* what() const throw();
 	};
 };
-
-std::ostream &operator<<(std::ostream &out, const Intern &c);
 
 #endif
