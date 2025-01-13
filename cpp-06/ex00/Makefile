@@ -1,4 +1,4 @@
-NAME		= test-ex00
+NAME		= convert
 	
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98 -g3
@@ -38,5 +38,28 @@ fclean: clean
 	@printf "$(YELLOW)    - Executable removed.$(RESET)\n"
 
 re: fclean all
+
+test: $(NAME)
+	@printf "$(GRAY)- Running tests...$(RESET)\n"
+
+	@echo "\nTest: Normal Case (42)"
+	@./$(NAME) 42 || printf "$(RED)Error during test: 42$(RESET)\n"
+
+	@echo "\nTest: Normal Case (3.14)"
+	@./$(NAME) 3.14 || printf "$(RED)Error during test: 3.14$(RESET)\n"
+
+	@echo "\nTest: Pseudo-Literal (nan)"
+	@./$(NAME) nan || printf "$(RED)Error during test: nan$(RESET)\n"
+
+	@echo "\nTest: Pseudo-Literal (+inf)"
+	@./$(NAME) +inf || printf "$(RED)Error during test: +inf$(RESET)\n"
+
+	@echo "\nTest: Pseudo-Literal (-inf)"
+	@./$(NAME) -inf || printf "$(RED)Error during test: -inf$(RESET)\n"
+
+	@echo "\nTest: Invalid Input (invalid)"
+	@./$(NAME) invalid || printf "$(RED)Error during test: invalid$(RESET)\n"
+
+	@printf "$(GREEN)- All tests completed.$(RESET)\n"
 
 .PHONY: all clean fclean re bonus norm
