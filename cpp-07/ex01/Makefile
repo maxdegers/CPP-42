@@ -1,4 +1,4 @@
-NAME		= test-00
+NAME		= test-01
 	
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98 -g3
@@ -10,7 +10,7 @@ FILES		= main
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		=  whatever.hpp
+HEADER		=  iter.hpp
 
 #Colors:
 GREEN		=	\e[92;5;118m
